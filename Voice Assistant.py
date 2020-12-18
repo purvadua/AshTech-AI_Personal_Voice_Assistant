@@ -97,7 +97,16 @@ if __name__=='__main__':
             time.sleep(5)
         elif "shoping" in statement:
             speak("nice mood sir")
-            webbrowser.open("amazon.com")
+            speak("Which site will you perfer?")
+            site = takeCommand().lower()
+            if 'amazon' in site or 'no choice' in site or 'any site' in site :
+                webbrowser.open("amazon.com")
+            elif 'myntra' in site:
+                webbrowser.open("myntra.com")
+            elif 'flipkart' in site:
+                webbrowser.open("flipkart.com")
+            elif 'snapdeal' in site:
+                webbrowser.open("snapdeal.com")
             speak("here you are sir")
             
 
